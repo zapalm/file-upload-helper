@@ -1,0 +1,36 @@
+{
+  "name": "zapalm/fileUploadHelper",
+  "type": "library",
+  "description": "PHP helper class for uploading a file via HTTP POST request.",
+  "keywords": [
+    "upload",
+    "file",
+    "post",
+    "http",
+    "request"
+  ],
+  "homepage": "https://github.com/zapalm/fileUploadHelper",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Maksim T.",
+      "email": "zapalm@yandex.com",
+      "role": "Developer"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "ext-curl": "*",
+    "php": ">=5.2"
+  },
+  "autoload": {
+    "psr-4": {
+      "zapalm\\fileUploadHelper\\": ""
+    }
+  },
+  "config": {
+    "platform": {
+      "php": "5.2"
+    }
+  }
+}
