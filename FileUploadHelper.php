@@ -120,7 +120,7 @@ class FileUploadHelper
     /**
      * Получить ответ на запрос.
      *
-     * @return string
+     * @return string|bool
      *
      * @author Maksim T. <zapalm@yandex.com>
      */
