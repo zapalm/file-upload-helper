@@ -80,6 +80,7 @@ class FileUploadHelper
         $this->curlHandler = curl_init($this->bootstrapUrl . $uri);
         $this->preparePostData($params, $files);
         $this->response = curl_exec($this->curlHandler);
+        $this->response = str_replace("\xEF\xBB\xBF", '', $this->response); // Removing UTF BOM (byte-order mark)
 
         if ($this->curlOptions[CURLOPT_VERBOSE]) {
             print_r(curl_getinfo($this->curlHandler));
@@ -107,6 +108,7 @@ class FileUploadHelper
         $this->curlHandler = curl_init($this->bootstrapUrl . $uri);
         $this->prepareRowData($file);
         $this->response = curl_exec($this->curlHandler);
+        $this->response = str_replace("\xEF\xBB\xBF", '', $this->response); // Removing UTF BOM (byte-order mark)
 
         if ($this->curlOptions[CURLOPT_VERBOSE]) {
             print_r(curl_getinfo($this->curlHandler));
