@@ -16,6 +16,8 @@ use Exception;
 /**
  * Загрузчик файлов.
  *
+ * @version 0.10.0
+ *
  * @author Maksim T. <zapalm@yandex.com>
  */
 class FileUploadHelper
