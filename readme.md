@@ -16,12 +16,12 @@ Add the dependency directly to your `composer.json` file:
 "repositories": [
   {
     "type": "vcs",
-    "url": "https://github.com/zapalm/fileUploadHelper"
+    "url": "https://github.com/zapalm/file-upload-helper"
   }
 ],
 "require": {
   "php": ">=5.2",
-  "zapalm/fileUploadHelper": "dev-master"
+  "zapalm/file-upload-helper": "dev-master"
 },
 ```
 
@@ -60,5 +60,5 @@ Contributors wishing to edit the project's files should follow the following pro
 
 [1]: https://www.php-fig.org/psr/
 [2]: https://www.patreon.com/zapalm
-[3]: http://zapalm.ru/
+[3]: https://zapalm.ru
 [4]: https://help.github.com/articles/about-pull-requests/
