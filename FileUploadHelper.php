@@ -11,6 +11,8 @@
 
 namespace zapalm\fileUploadHelper;
 
+use Exception;
+
 /**
  * Загрузчик файлов.
  *
@@ -71,7 +73,7 @@ class FileUploadHelper
      *
      * @return self
      *
-     * @throws \Exception
+     * @throws Exception
      *
      * @author Maksim T. <zapalm@yandex.com>
      */
@@ -99,7 +101,7 @@ class FileUploadHelper
      *
      * @return self
      *
-     * @throws \Exception
+     * @throws Exception
      *
      * @author Maksim T. <zapalm@yandex.com>
      */
@@ -175,7 +177,7 @@ class FileUploadHelper
      *
      * @return bool
      *
-     * @throws \Exception
+     * @throws Exception
      *
      * @author Maksim T. <zapalm@yandex.com>
      */
@@ -185,7 +187,7 @@ class FileUploadHelper
 
         $result = curl_setopt_array($this->curlHandler, $this->curlOptions);
         if (!$result) {
-            throw new \Exception('Ошибка при установки опций cURL для запроса.');
+            throw new Exception('Ошибка при установки опций cURL для запроса.');
         }
 
         return $result;
@@ -199,7 +201,7 @@ class FileUploadHelper
      *
      * @return bool
      *
-     * @throws \Exception
+     * @throws Exception
      *
      * @author Maksim T. <zapalm@yandex.com>
      */
@@ -225,7 +227,7 @@ class FileUploadHelper
                 case (false === ($path = realpath(filter_var($path)))):
                 case !is_file($path):
                 case !is_readable($path):
-                    throw new \Exception('Массив файлов задан неверно.');
+                    throw new Exception('Массив файлов задан неверно.');
             }
             $data   = file_get_contents($path);
             $path   = call_user_func('end', explode(DIRECTORY_SEPARATOR, $path));
@@ -264,7 +266,7 @@ class FileUploadHelper
         // Set options
         $result = curl_setopt_array($this->curlHandler, $this->curlOptions);
         if (!$result) {
-            throw new \Exception('Ошибка при установки опций cURL для запроса.');
+            throw new Exception('Ошибка при установки опций cURL для запроса.');
         }
 
         return $result;
